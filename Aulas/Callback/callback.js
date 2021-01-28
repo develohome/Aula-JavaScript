@@ -1,4 +1,4 @@
-
+// Funções de Callback são funções que podem ser chamadas dentro de outras funções
 function exibir(id, callbackTrue, callbackFalse){
     if(id){
         callbackTrue();
