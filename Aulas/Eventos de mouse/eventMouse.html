@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Mouse</title>
+    <script>
+        function click1(){
+            alert("vc clicou")
+        }
+        function click2(){
+            alert("vc clicou 2x")
+        }
+        function click3(){
+            alert("vc soltou o botão do mouse")
+        }
+        function click4(){
+            alert("vc passou com o mouse sobre o elemento")
+        }
+        function click5(){
+            alert("vc saiu do elemento")
+        }
+    </script>
+</head>
+<body>
+    <div style="background: red;width: 100px;height: 100px;" onclick="click1()"></div>
+    <div style="background: cyan;width: 100px;height: 100px;" ondblclick="click2()"></div>
+    <div style="background: green;width: 100px;height: 100px;" onmouseup="click3()"></div>
+    <div style="background: violet;width: 100px;height: 100px;" onmouseover="click4()" onmouseout="click5()""></div>
+    <div style="background: yellow;width: 100px;height: 100px;" "></div>
+</body>
+</html>
