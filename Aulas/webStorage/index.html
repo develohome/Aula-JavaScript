@@ -11,7 +11,23 @@
         
         document.write(localStorage.getItem("nome") + "<br>");
         localStorage.removeItem("nome");
-        document.write(localStorage.getItem("nome"))
+        document.write(localStorage.getItem("nome")+ "<br>")
+
+        document.write("outra forma <br>")
+
+        localStorage.nome = "Alex";
+        document.write(localStorage.getItem("nome") + "<br>");
+        localStorage.removeItem("nome");
+
+        if(localStorage.nome == "" || localStorage.nome == null){
+            localStorage.nome = prompt("Digite seu nome")
+            document.write("Olá, " + localStorage.nome)
+        }else{
+            document.write("Olá, " + localStorage.nome)
+        }
+        localStorage.removeItem("nome")
+        sessionStorage.nome = "Alex"
+        document.write(sessionStorage.nome)
     </script>
 </head>
 <body>
