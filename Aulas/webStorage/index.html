@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStorage</title>
+    <script>
+        // localStorage, os dados são salvos em seu navegador e mesmo que o navegador seja fechado os dados continuam salvos
+        //sessionStorage, tbm serve para armazenar dados mas a diferença é que quando o navegador é fechado os dados são perdidos
+        localStorage.setItem("nome", "alex");
+        
+        document.write(localStorage.getItem("nome") + "<br>");
+        localStorage.removeItem("nome");
+        document.write(localStorage.getItem("nome"))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
