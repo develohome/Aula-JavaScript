@@ -1,3 +1,4 @@
+// spred é utilizado para concatenar obj ou array a um outro, utilizando o ...
 let primeiros = [1,2,3]
 
 console.log(primeiros)
@@ -18,3 +19,14 @@ let novaPessoa = {
     cidade:"São Paulo"
 }
 console.log(novaPessoa);
+
+function cadastroPessoa(info){
+    let novosDados = {
+        ...info,
+        cargo: "Programador",
+        status: 1,
+        codigo: '654423'
+    };
+    return novosDados;
+}
+console.log(cadastroPessoa({nome: "jorge", sobrenome: "G", idade: 11}))
