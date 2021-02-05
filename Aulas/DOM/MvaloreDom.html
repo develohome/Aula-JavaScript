@@ -10,16 +10,16 @@
     <input type="text" name="" id="entrada" placeholder="Digite um caracter aqui" onkeyup="distribuiCaracter()">
     <br><br>
     <span>Letras</span>
-    <input type="text" id="letras">
+    <input type="text" id="letras" disabled="disabled">
     <br><br>
     <span>Numeros</span>
-    <input type="text" id="numeros">
+    <input type="text" id="numeros" disabled="disabled">
     <script>
         function distribuiCaracter(){
             let caracter = document.getElementById('entrada').value
             document.getElementById('entrada').value = ""
             console.log(caracter)
-
+            caracter.trim()
             switch(caracter){
                 case '0':
                 case '1':
@@ -31,11 +31,11 @@
                 case '7':
                 case '8':
                 case '9':
-                    document.getElementById('numeros').value = caracter;
+                    document.getElementById('numeros').value += caracter;
                     // adicionar o caracter ao campo numeros
                     break;
                 default:    
-                    document.getElementById('letras').value = caracter;
+                    document.getElementById('letras').value += caracter;
             }
         }
     </script>
