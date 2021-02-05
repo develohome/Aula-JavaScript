@@ -7,15 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="" id="" placeholder="Digite um caracter aqui">
+    <input type="text" name="" id="entrada" placeholder="Digite um caracter aqui" onkeyup="distribuiCaracter()">
     <br><br>
     <span>Letras</span>
-    <input type="text" name="" id="">
+    <input type="text" id="letras">
     <br><br>
     <span>Numeros</span>
-    <input type="text" name="" id="">
+    <input type="text" id="numeros">
     <script>
+        function distribuiCaracter(){
+            let caracter = document.getElementById('entrada').value
+            document.getElementById('entrada').value = ""
+            console.log(caracter)
 
+            switch(caracter){
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    document.getElementById('numeros').value = caracter;
+                    // adicionar o caracter ao campo numeros
+                    break;
+                default:    
+                    document.getElementById('letras').value = caracter;
+            }
+        }
     </script>
 </body>
 </html>
