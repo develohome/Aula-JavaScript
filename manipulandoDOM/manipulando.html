@@ -15,16 +15,18 @@
 </head>
 <body>
     <h1>Maniputalndo Estilos</h1>
-    <button onclick="mudar('blue')">Azul</button>
-    <button onclick="mudar('red')">Vermelho</button>
-    <button onclick="mudar('green')">Verde</button>
+    <button onclick="mudar('blue', 400, 400)">Azul</button>
+    <button onclick="mudar('red', 60, 600)">Vermelho</button>
+    <button onclick="mudar('green', 800, 800)">Verde</button>
     <div class="demo">
 
     </div>
     <script>
         var demo = document.querySelector(".demo")
-        function mudar(cor){
+        function mudar(cor, a, l){
             demo.style.background = cor;
+            demo.style.width = l + "px";
+            demo.style.height = a + "px";
         }
         
     </script>
