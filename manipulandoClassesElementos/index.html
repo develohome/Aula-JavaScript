@@ -5,8 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .estilo1{
+            background: red;
+            color: white;
+        }
+        .estilo2{
+            width: 400;
+            height: 50px;
+            background: #ff0000;
+            text-align: center;
+            font-size: 25px;
+            color: #fff;
+            padding: 25px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="mensagem" class="estilo1">
+        Modificando a classe do elemento
+    </div>
+    <br>
+    <button type="button" onclick="modificaClasse()">Aplicar classe</button>
+    <script>
+        function modificaClasse(){
+            document.querySelector("#mensagem").className = 'estilo2'
+        }
+    </script>
 </body>
 </html>
