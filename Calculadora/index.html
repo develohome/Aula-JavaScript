@@ -103,10 +103,9 @@
             res.value += valor
           }
 
-          if(valor === '='{
-            let valor_campo = 
-
-          })
+          if(valor === '='){
+             res.value = eval(res.value)
+          }
         }else if(tipo === 'valor'){
           //let camp_valor = res.value
           res.value += valor
