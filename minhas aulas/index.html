@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>passando o caminho para uma img</title>
+    <style>
+        .banner{
+            width: 800px;
+            height: 400px;
+            background: silver;
+        }
+        .banner img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="banner">
+        <img src="" alt="">
+    </div>
+    <script>
+        const src= document.querySelector('.banner img');
+        var img = 1;
+        setInterval(function(){
+            src.src = './img/'+img+'.jpg'
+            img++;
+            if(img == 4){
+                img = 1
+            }
+        }, 3000)
+    </script>
+</body>
+</html>
